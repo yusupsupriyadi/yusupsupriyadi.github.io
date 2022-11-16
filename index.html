@@ -18,9 +18,8 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="shortcut icon" href="images/yusup_icon.webp">
+        
         <title>Yusup Supriyadi</title>
-        <!--===== Chats Box =====-->
-        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="24e9eb67-aaae-4239-a556-9e8393c77911";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELGNM47ELT"></script>
@@ -79,8 +78,6 @@
                     <div class="about__img">
                         <img src="images/perfil.webp" alt="">
                     </div>
-                    
-                        
                     
                     <div>
                         <h2 class="about__subtitle">I am Yusup Supriyadi</h2>
@@ -179,20 +176,17 @@ I have experience as an intern at <span><a href="https://kejar.id/" style="color
                         <h3 class="contact__subtitle">EMAIL</h3>
                         <span class="contact__text">yusupsupriyadistudio@gmail.com</span>
 
-                        <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">+62 82138554318</span>
-
                         <h3 class="contact__subtitle">ADRESS</h3>
-                        <span class="contact__text">Bogor, Jawa Barat, Indonesia</span>
+                        <span class="contact__text">Jawa Barat, Indonesia</span>
                     </div>
-                    <!-- <form action="" method="" class="contact__form">
+                    <form class="contact__form">
                         <div class="contact__inputs">
-                            <input name="name" type="text" placeholder="Name" class="contact__input">
-                            <input name="email" type="mail" placeholder="Email" class="contact__input">
+                            <input id="name" name="name" type="text" placeholder="Name" class="contact__input">
+                            <input id="email" name="email" type="mail" placeholder="Email" class="contact__input">
                         </div>
-                        <textarea name="email_body" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="submit" value="Send" class="contact__button">
-                    </form>  -->
+                        <textarea id="body-email" name="email_body" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <button id="btn-send-email" class="contact__button">Send</button>
+                    </form> 
                 </div>
             </section>
         </main>
@@ -220,7 +214,7 @@ I have experience as an intern at <span><a href="https://kejar.id/" style="color
                 </div>
             </div>
         </footer>
-        <!-- Hotjar Tracking Code for https://yusupsupriyadi.github.io/ -->
+       <!-- Hotjar Tracking Code for https://yusupsupriyadi.github.io/ -->
         <script>
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -235,5 +229,25 @@ I have experience as an intern at <span><a href="https://kejar.id/" style="color
         <script src="https://unpkg.com/scrollreveal"></script>
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $(document).on('click', '#btn-send-email', function(){
+                sendEmail();
+            })
+
+            function sendEmail(){
+                Email.send({
+                SecureToken : "5c3929f3-4253-4b99-bd4a-81604e5020ed",
+                To : 'yusupsupriyadistudio@gmail.com',
+                From : $("#email").val(),
+                Subject : "Contact From Portofolio Website",
+                Body : $('#body-email').val(),
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
     </body>
 </html>
