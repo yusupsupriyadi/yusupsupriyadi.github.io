@@ -179,14 +179,14 @@ I have experience as an intern at <span><a href="https://kejar.id/" style="color
                         <h3 class="contact__subtitle">ADRESS</h3>
                         <span class="contact__text">Jawa Barat, Indonesia</span>
                     </div>
-                    <form class="contact__form">
+                    <div class="contact__form">
                         <div class="contact__inputs">
                             <input id="name" name="name" type="text" placeholder="Name" class="contact__input">
                             <input id="email" name="email" type="mail" placeholder="Email" class="contact__input">
                         </div>
                         <textarea id="body-email" name="email_body" id="" cols="0" rows="10" class="contact__input"></textarea>
                         <button id="btn-send-email" class="contact__button">Send</button>
-                    </form> 
+                    </div> 
                 </div>
             </section>
         </main>
@@ -230,11 +230,14 @@ I have experience as an intern at <span><a href="https://kejar.id/" style="color
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
 
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
             $(document).on('click', '#btn-send-email', function(){
-                sendEmail();
+                sendEmail()
             })
 
             function sendEmail(){
