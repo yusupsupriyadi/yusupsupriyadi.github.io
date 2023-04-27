@@ -183,7 +183,7 @@ img{
     overflow: hidden;
 }
 .home__container{
-    height: calc(100vh - var(--header-height));
+    height: calc(90vh - var(--header-height));
     row-gap: 5rem;
 }
 .home__title{
