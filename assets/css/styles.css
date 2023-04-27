@@ -208,7 +208,7 @@ img{
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 295px;
+    width: 400px;
 }
 
 /* ===== ABOUT =====*/
@@ -233,14 +233,15 @@ img{
 .about__subtitle{
     font-size: var(--h2-font-size);
     color: var(--first-color);
-    margin-bottom: var(--mb-1);
 }
 .about__text{
     margin-bottom: var(--mb-4);
 }
 .about__profession{
     display: block;
-    margin-bottom: var(--mb-4);
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: var(--mb-2);
 }
 .about__social-icon{
     font-size: 1.4rem;
@@ -447,7 +448,7 @@ img{
         row-gap: 0;
     }
     .home__img{
-        width: 524px;
+        width: 630px;
         right: 10%;
     }
 
