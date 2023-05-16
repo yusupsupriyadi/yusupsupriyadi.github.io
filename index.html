@@ -10,12 +10,6 @@
         content="Welcome to my personal website. Hope you are interested in working together." />
     <meta property="og:url" content="https://yusupsupriyadi.github.io/" />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:image" content="https://ia601400.us.archive.org/1/items/screenshot-2021-06-18-220941_202106/Screenshot%202021-06-18%20220941.jpg" />
-    <meta property="og:image:url" content="https://ia601400.us.archive.org/1/items/screenshot-2021-06-18-220941_202106/Screenshot%202021-06-18%20220941.jpg" />
-    <meta property="og:image:secure_url" content="https://ia601400.us.archive.org/1/items/screenshot-2021-06-18-220941_202106/Screenshot%202021-06-18%20220941.jpg" />
-    <meta property="og:image:type" content="image/jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" /> -->
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -39,6 +33,12 @@
 </head>
 
 <body>
+    <div class="loading-screen">
+        <div class="lds-roller d-none">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+      
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -259,6 +259,14 @@
         $(document).on('click', '#btn-send-email', function () {
             sendEmail()
         })
+
+        setTimeout(function() {
+            document.querySelector('.lds-roller').classList.remove('d-none');
+        }, 1000);
+
+        window.addEventListener('load', function() {
+            document.querySelector('.loading-screen').classList.add('d-none');
+        });
 
         function sendEmail() {
             Email.send({
