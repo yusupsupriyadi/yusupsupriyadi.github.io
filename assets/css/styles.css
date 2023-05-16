@@ -599,10 +599,16 @@ img {
 	z-index: 9999;
 }
 
-.fade-out {
-    animation: fade-out 1s ease-in-out forwards;
+.loading-screen.hide {
+	opacity: 0;
 }
 
 .d-none {
-    display: none;
+	display: none;
+}
+
+.block{
+	width: 100px;
+	height: 900px;
+	background-color: #5361ff;
 }
